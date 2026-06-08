@@ -628,12 +628,14 @@ class Client
      * @param int|null $end optional, Unix timestamp in milliseconds
      * @param string|null $mac optional, AP MAC address to return stats for, when empty,
      *                      stats for all APs are returned
-     * @param array|null $attribs optional, array of attributes to collect, default: (bytes, num_sta, time). Valid values:
+     * @param array|null $attribs optional, array of attributes to collect, default: ['bytes', 'num_sta', 'time'].
+     *                            Valid values:
      *                            bytes, num_sta, time, wifi_tx_attempts, tx_retries, wifi_tx_dropped,
      *                            mac_filter_rejections, user-wlan-num_sta_connected, user-wlan-num_sta_disconnected,
      *                            na-wifi_tx_attempts, ng-wifi_tx_attempts, na-wifi_tx_dropped, ng-wifi_tx_dropped,
      *                            na-tx_retries, ng-tx_retries, na-tx_packets, ng-tx_packets, na-tx_bytes,
-     *                            ng-tx_bytes, na-rx_packets, ng-rx_packets, na-rx_bytes, ng-rx_bytes
+     *                            ng-tx_bytes, na-rx_packets, ng-rx_packets, na-rx_bytes, ng-rx_bytes, rx_bytes, tx_bytes,
+     *                            rx_packets, tx_packets, na-num_sta, ng-num_sta, duration, satisfaction
      * @return array|bool returns an array of 5-minute stats objects
      * @throws Exception
      */
